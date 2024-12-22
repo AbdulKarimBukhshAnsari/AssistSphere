@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoSmart: Your Partner in Emergency Excellence</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!--Swiper JS CSS Link-->
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- main section -->
+    <div class="w-full h-[550px] bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] flex justify-start flex-col max-lg:h-full" id="main">
+        <div class="flex justify-between items-center w-full px-20 h-24">
+            <a href="index.html" class="font-bold text-3xl">OncoSmart</a>
+            <ul class="flex justify-between w-2/5 text-xl max-lg:hidden">
+                <li><a href="#main" class="border-b-2 border-transparent hover:border-black">Home</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black">About</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black">Services</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black">Contact</a></li>
+            </ul>
+            <img src="images/menu.png" alt="menu" class="hidden max-lg:block w-8" id="menu">
+        </div>
+        <div class="w-screen py-6 duration-1000 translate-y-[-300%] backdrop-blur-md transition-transform flex justify-between items-center bg-[#ffffff79]" id="menuList">
+            <ul class="flex justify-between w-3/5 text-xl pl-20 max-md:w-[90%] max-md:pl-4 max-sm:flex-col max-sm:pl-20 max-sm:gap-4">
+                <li><a href="#main" class="border-b-2 border-transparent hover:border-black">Home</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black">About</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black">Services</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black">Contact</a></li>
+            </ul>
+            <img src="images/close.png" alt="close" class="w-12 pr-6" id="close">
+        </div>
+        
+        <div class="flex w-full h-full justify-between items-end px-20 relative overflow-hidden max-lg:flex-col">
+            <div class="flex flex-col w-1/2 justify-center items-start h-full max-lg:w-full max-lg:text-center">
+                <h1 class="font-bold text-5xl pb-10 max-lg:py-9 max-sm:text-3xl bannerText">Prepare. Respond. Save Lives.</h1>
+                <p class="text-2xl max-sm:text-lg bannerText">OncoSmart empowers individuals with knowledge about cancer symptoms. Learn to recognize early warning signs, access helpful resources, and take proactive steps towards early detection and better health outcomes.</p>
+            </div>
+            <div class="relative top-[72px]"><img src="images/banner.svg" alt="banner" class="w-[750px] max-sm:w-[200%]"></div>
+        </div>
+    </div>
+
+    <!-- information section -->
+    <div class="w-4/5 mx-auto my-14">
+        <!-- First Row with 3 Cards -->
+        <div class="flex justify-center gap-6 flex-row items-center mt-6 flex-wrap" id="info1">
+            <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
+                <img src="images/icon1.png" alt="icon" class="w-20">
+                <h1 class="text-xl font-bold mt-5">Early Detection Matters</h1>
+                <p class="text-gray-600">Recognize the warning signs early to improve the chances of successful treatment and recovery.</p>
+            </div>
+            <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
+                <img src="images/icon2.png" alt="icon" class="w-20">
+                <h1 class="text-xl font-bold mt-5">Common Cancer Symptoms</h1>
+                <p class="text-gray-600">Learn about common symptoms such as persistent fatigue, unexplained weight loss, or unusual lumps.</p>
+            </div>
+            <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
+                <img src="images/icon3.png" alt="icon" class="w-20">
+                <h1 class="text-xl font-bold mt-5">When to Seek Help</h1>
+                <p class="text-gray-600">Know when it's crucial to consult a healthcare professional for further screening and diagnosis.</p>
+            </div>
+        </div>
+        
+        <!-- Second Row with 4 Cards -->
+        <div class="flex justify-center gap-6 flex-row items-center mt-6 flex-wrap mb-[60px]" id="info2">
+            <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
+                <img src="images/icon4.png" alt="icon" class="w-20">
+                <h1 class="text-xl font-bold mt-5">Understanding Risk Factors</h1>
+                <p class="text-gray-600">Explore how lifestyle, genetics, and environmental factors contribute to cancer risks.</p>
+            </div>
+            <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
+                <img src="images/icon5.png" alt="icon" class="w-20">
+                <h1 class="text-xl font-bold mt-5">Support and Resources</h1>
+                <p class="text-gray-600">Access information on support groups, treatment options, and caregiving tips for cancer patients.</p>
+            </div>
+            <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
+                <img src="images/icon6.png" alt="icon" class="w-20">
+                <h1 class="text-xl font-bold mt-5">Healthy Living Tips</h1>
+                <p class="text-gray-600">Adopt habits that reduce your risk of cancer, including a balanced diet, exercise, and regular check-ups.</p>
+            </div>
+            <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
+                <img src="images/icon7.png" alt="icon" class="w-20">
+                <h1 class="text-xl font-bold mt-5">Latest Research Insights</h1>
+                <p class="text-gray-600">Stay updated with breakthroughs in cancer research and new treatment advancements.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="swiper shadow-md mb-12 w-[600px] h-[300px] max-sm:w-[90%] max-sm:h-[400px]">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide p-11">
+            <div class="flex items-center gap-4">
+                <img src="images/person2.jpg" alt="person" class="w-1h-12 h-12 rounded-full">
+                <h1 class="text-2xl font-semibold">John Doe</h1>
+            </div>
+            <p class="mt-4 text-gray-600 text-lg">"OncoSmart has been a game-changer in raising awareness about cancer symptoms. It's a platform everyone should know about!"</p>
+        </div>
+        
+        <div class="swiper-slide p-11">
+            <div class="flex items-center gap-4">
+                <img src="images/person1.jpg" alt="person" class="w-1h-12 h-12 rounded-full">
+                <h1 class="text-2xl font-semibold">Sarah Taylor</h1>
+            </div>
+            <p class="mt-4 text-gray-600 text-lg">"The insights and resources here helped me encourage my loved ones to get screened early. A truly life-saving initiative!"</p>
+        </div>
+        
+        <div class="swiper-slide p-11">
+            <div class="flex items-center gap-4">
+                <img src="images/person4.jpg" alt="person" class="w-1h-12 h-12 rounded-full">
+                <h1 class="text-2xl font-semibold">Michael Smith</h1>
+            </div>
+            <p class="mt-4 text-gray-600 text-lg">"I learned so much about identifying early signs of cancer through OncoSmart. It's an invaluable tool for awareness." </p>
+        </div>
+        
+        <div class="swiper-slide p-11">
+            <div class="flex items-center gap-4">
+                <img src="images/person3.jpg" alt="person" class="w-1h-12 h-12 rounded-full">
+                <h1 class="text-2xl font-semibold">Emily Brown</h1>
+            </div>
+            <p class="mt-4 text-gray-600 text-lg">"OncoSmart's educational materials are top-notch. The information is clear, actionable, and truly empowering." </p>
+        </div>
+        
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" style="width: 5px;"></div>
+        <div class="swiper-button-next" style="width: 5px;"></div>
+      
+      </div>
+
+
+    <!-- chatbot -->
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "8KI2Pm_TSHrphMz-EM7gx",
+            domain: "www.chatbase.co",
+            theme: "light"
+        };
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="8KI2Pm_TSHrphMz-EM7gx"
+        domain="www.chatbase.co">
+    </script>
+
+    <!--Swiper JS script tag-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- gsap Lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="gsap.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
