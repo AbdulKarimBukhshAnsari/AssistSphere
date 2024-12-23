@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoSmart: Your Partner in Emergency Excellence</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body class="w-full h-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8]">
+    <div class="w-screen flex justify-between items-center max-lg:flex-col">
+        <div class="w-3/5 p-12 max-lg:w-full">
+            <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Patient Registration</h1>
+            <form action="#" method="POST">
+                <!-- Personal Information -->
+                <div class="flex justify-between items-center mb-5 max-sm:flex-col max-sm:w-full max-sm:mb-0">
+                    <div class="w-[30%] max-sm:w-full max-sm:mb-5">
+                        <label for="fullName" class="block text-gray-700 font-semibold">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+                    </div>
+                    <div class="w-[30%] max-sm:w-full max-sm:mb-5">
+                        <label for="dob" class="block text-gray-700 font-semibold">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+                    </div>
+                    <div class="w-[30%] max-sm:w-full max-sm:mb-5">
+                        <label for="gender" class="block text-gray-700 font-semibold">Gender</label>
+                        <select id="gender" name="gender" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Contact Information -->
+                <div class="flex justify-between items-center mb-5 max-sm:flex-col max-sm:w-full max-sm:mb-0">
+                    <div class="w-[48%] max-sm:w-full max-sm:mb-5">
+                        <label for="email" class="block text-gray-700 font-semibold">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+                    </div>
+                    <div class="w-[48%] max-sm:w-full max-sm:mb-5">
+                        <label for="phone" class="block text-gray-700 font-semibold">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <label for="address" class="block text-gray-700 font-semibold">Address</label>
+                    <textarea id="address" name="address" rows="2" placeholder="Enter your address" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"></textarea>
+                </div>
+    
+                <!-- Medical Information -->
+                <div class="mb-5">
+                    <label for="symptoms" class="block text-gray-700 font-semibold">Symptoms</label>
+                    <textarea id="symptoms" name="symptoms" rows="2" placeholder="Briefly describe your symptoms" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"></textarea>
+                </div>
+                <div class="mb-5">
+                    <label for="medicalHistory" class="block text-gray-700 font-semibold">Medical History</label>
+                    <textarea id="medicalHistory" name="medicalHistory" rows="3" placeholder="Provide details about your medical history (if any)" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"></textarea>
+                </div>
+                <!-- Login Information -->
+                <div class="flex justify-between items-center mb-5 max-sm:flex-col max-sm:w-full max-sm:mb-0">
+                    <div class="w-[48%] max-sm:w-full max-sm:mb-5">
+                        <label for="password" class="block text-gray-700 font-semibold">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+                    </div>
+                    <div class="w-[48%] max-sm:w-full max-sm:mb-5">
+                        <label for="confirmPassword" class="block text-gray-700 font-semibold">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+                    </div>
+                </div> 
+    
+                <!-- Submit Button -->
+                <div class="flex justify-center">
+                    <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-lg font-semibold hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">Register</button>
+                </div>
+            </form>
+        </div>
+        <div class="w-2/5 flex justify-center items-center max-lg:hidden">
+            <img src="../images/med.svg" alt="medical" class="w-3/5 mx-auto">
+        </div>
+    </div>
+</body>
+</html>
