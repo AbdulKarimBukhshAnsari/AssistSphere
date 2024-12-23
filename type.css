@@ -1,0 +1,93 @@
+.prevention-card {
+    @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+
+/* Optional: Add animation on hover */
+.prevention-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh; /* Adjust popup height */
+    overflow-y: auto; /* Enables the scrollbar */
+    box-sizing: border-box; /* Ensure padding is included in dimensions */
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 10px; /* Adjust scrollbar width */
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Scrollbar color */
+    border-radius: 10px; /* Round corners */
+    border: 2px solid white; /* Optional: adds space around the thumb */
+    height: 20px; /* Minimum height of the scrollbar thumb */
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Track color */
+    border-radius: 10px; /* Round track corners */
+}
+
+.popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.popup-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.popup-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.popup-text {
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.popup-list {
+    margin: 0.5rem 0 1rem 1.5rem;
+    list-style-type: disc;
+}
+
+.popup-list li {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}

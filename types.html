@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Cancer | OncoSmart</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./type.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body class="overflow-x-hidden">
+    <!-- main section -->
+    <div class="w-full h-[400px] bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] flex justify-start flex-col max-lg:h-full" id="main">
+        <div class="flex justify-between items-center w-full px-20 h-24">
+            <a href="index.html" class="font-bold text-3xl">OncoSmart</a>
+            <ul class="flex justify-between w-2/5 text-xl max-lg:hidden">
+                <li><a href="./index.html" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black anchor">About</a></li>
+                <li><a href="./types.html" class="border-b-2 border-transparent hover:border-black anchor">Types</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black anchor">Services</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black anchor">Contact</a></li>
+            </ul>
+            <img src="images/menu.png" alt="menu" class="hidden max-lg:block w-8" id="menu">
+        </div>
+        <div class="w-screen py-6 duration-1000 translate-y-[-300%] backdrop-blur-md transition-transform flex justify-between items-center bg-[#ffffff79]" id="menuList">
+            <ul class="flex justify-between w-3/5 text-xl pl-20 max-md:w-[90%] max-md:pl-4 max-sm:flex-col max-sm:pl-20 max-sm:gap-4">
+                <li><a href="index.html" class="border-b-2 border-transparent hover:border-black menuitems">Home</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black menuitems">About</a></li>
+                <li><a href="types.html" class="border-b-2 border-black menuitems">Types</a></li>
+                <li><a href="#" class="border-b-2 border-transparent hover:border-black menuitems">Contact</a></li>
+            </ul>
+            <img src="images/close.png" alt="close" class="w-12 pr-6" id="close">
+        </div>
+        
+        <div class="flex w-full justify-center items-center px-20 relative">
+            <div class="text-center">
+                <h1 class="font-bold text-5xl pb-6 max-lg:py-9 max-sm:text-3xl">Types of Cancer</h1>
+                <p class="text-xl max-sm:text-lg">Understanding different types of cancer and their early warning signs</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Cancer Types Grid -->
+    <!-- First Row with 3 Cards -->
+    <div class="flex justify-center gap-6 flex-row items-center mt-6 flex-wrap" id="TYPES1">
+        <!-- Breast Cancer -->
+        <div class="p-5 bg-white shadow-lg rounded-lg w-[300px] h-[400px]">
+            <div class="h-[200px] overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1576089073624-b5751a8f4de9?auto=format&fit=crop&q=80&w=800&h=500" alt="Breast Cancer Awareness" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-xl font-bold mt-5">Breast Cancer</h1>
+            <p class="text-gray-600 mt-2">Common signs include lumps, changes in breast size/shape, and skin changes. Early detection through regular screening is crucial.</p>
+        </div>
+        <!-- Lung Cancer -->
+        <div class="p-5 bg-white shadow-lg rounded-lg w-[300px] h-[400px]">
+            <div class="h-[200px] overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&q=80&w=800&h=500" alt="Lung Health" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-xl font-bold mt-5">Lung Cancer</h1>
+            <p class="text-gray-600 mt-2">Watch for persistent cough, chest pain, and shortness of breath. Smoking cessation is key to prevention.</p>
+        </div>
+        <!-- Colorectal Cancer -->
+        <div class="p-5 bg-white shadow-lg rounded-lg w-[300px] h-[400px]">
+            <div class="h-[200px] overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800&h=500" alt="Digestive Health" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-xl font-bold mt-5">Colorectal Cancer</h1>
+            <p class="text-gray-600 mt-2">Changes in bowel habits, blood in stool, and unexplained weight loss are common symptoms.</p>
+        </div>
+    </div>
+
+    <!-- Second Row with 3 Cards -->
+    <div class="flex justify-center gap-6 flex-row items-center mt-6 flex-wrap" id="TYPES2">
+        <!-- Skin Cancer -->
+        <div class="p-5 bg-white shadow-lg rounded-lg w-[300px] h-[400px]">
+            <div class="h-[200px] overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&q=80&w=800&h=500" alt="Skin Health" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-xl font-bold mt-5">Skin Cancer</h1>
+            <p class="text-gray-600 mt-2">Look for changes in moles, new growths, and spots that don't heal. Regular skin checks are important.</p>
+        </div>
+        <!-- Prostate Cancer -->
+        <div class="p-5 bg-white shadow-lg rounded-lg w-[300px] h-[400px]">
+            <div class="h-[200px] overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1579684288538-c76a2fab9617?auto=format&fit=crop&q=80&w=800&h=500" alt="Men's Health" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-xl font-bold mt-5">Prostate Cancer</h1>
+            <p class="text-gray-600 mt-2">Symptoms include difficulty urinating and lower back pain. Regular screening is recommended for men over 50.</p>
+        </div>
+        <!-- Blood Cancer -->
+        <div class="p-5 bg-white shadow-lg rounded-lg w-[300px] h-[400px]">
+            <div class="h-[200px] overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1579684453377-48ec05c6b30a?auto=format&fit=crop&q=80&w=800&h=500" alt="Blood Cancer" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-xl font-bold mt-5">Blood Cancer</h1>
+            <p class="text-gray-600 mt-2">Fatigue, frequent infections, and easy bruising are common signs. Includes leukemia, lymphoma, and myeloma.</p>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="min-h-screen bg-gray-100">
+        <!-- Prevention Section -->
+        <div class="bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] py-24 px-8 h-100%">
+            <div class="w-4/5 mx-auto">
+                <h2 class="text-3xl font-bold mb-12 mt-4 text-center text-gray-800">Prevention Tips</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                    <div class="prevention-card">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Regular Screening</h3>
+                        <p class="text-gray-600 leading-relaxed">Schedule regular check-ups and cancer screenings as recommended by your healthcare provider.</p>
+                    </div>
+                    <div class="prevention-card">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Healthy Lifestyle</h3>
+                        <p class="text-gray-600 leading-relaxed">Maintain a balanced diet, exercise regularly, and avoid tobacco products.</p>
+                    </div>
+                    <div class="prevention-card">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Sun Protection</h3>
+                        <p class="text-gray-600 leading-relaxed">Use sunscreen, wear protective clothing, and avoid excessive sun exposure.</p>
+                    </div>
+                    <div class="prevention-card">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Know Your Risk</h3>
+                        <p class="text-gray-600 leading-relaxed">Understand your family history and discuss risk factors with your doctor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add any interactive features here
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.prevention-card');
+            
+            // Optional: Add animation when cards come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+                observer.observe(card);
+            });
+        });
+
+        // Cancer type descriptions
+        const cancerDescriptions = {
+            breast: {
+                title: "Understanding Breast Cancer",
+                content: `
+                    <p class="popup-text">Breast cancer is one of the most common cancers affecting women worldwide, though it can also occur in men. This type of cancer develops in the breast tissue, typically in the ducts that carry milk to the nipple or the lobules that produce milk.</p>
+                    
+                    <h3 class="popup-subtitle">Key Information:</h3>
+                    <ul class="popup-list">
+                        <li>Most common cancer in women worldwide</li>
+                        <li>Early detection significantly improves survival rates</li>
+                        <li>Regular screening recommended for women over 40</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Common Symptoms:</h3>
+                    <ul class="popup-list">
+                        <li>New lump in the breast or underarm</li>
+                        <li>Thickening or swelling of part of the breast</li>
+                        <li>Irritation or dimpling of breast skin</li>
+                        <li>Redness or flaky skin in the nipple area</li>
+                        <li>Nipple discharge other than breast milk</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Risk Factors:</h3>
+                    <p class="popup-text">Risk factors include age, family history, genetic mutations (BRCA1 and BRCA2), early menstruation, late menopause, and lifestyle factors such as obesity and alcohol consumption. Regular self-examinations and mammograms are crucial for early detection and successful treatment.</p>`
+            },
+            lung: {
+                title: "Understanding Lung Cancer",
+                content: `
+                    <p class="popup-text">Lung cancer is a type of cancer that begins in the lungs and is one of the leading causes of cancer death worldwide. It occurs when cells in the lungs grow uncontrollably, forming tumors that interfere with the lung's ability to provide oxygen to the body.</p>
+
+                    <h3 class="popup-subtitle">Types of Lung Cancer:</h3>
+                    <ul class="popup-list">
+                        <li>Non-small cell lung cancer (NSCLC) - Most common type</li>
+                        <li>Small cell lung cancer (SCLC) - More aggressive, often linked to smoking</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Warning Signs:</h3>
+                    <ul class="popup-list">
+                        <li>Persistent cough that worsens over time</li>
+                        <li>Chest pain that worsens with deep breathing</li>
+                        <li>Hoarseness or voice changes</li>
+                        <li>Unexplained weight loss</li>
+                        <li>Coughing up blood</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Prevention and Risk Factors:</h3>
+                    <p class="popup-text">Smoking is the leading cause of lung cancer, responsible for about 80% of lung cancer deaths. Other risk factors include exposure to secondhand smoke, radon gas, and certain workplace chemicals. The best prevention is to never smoke or to quit smoking, and to avoid exposure to known risk factors.</p>`
+            },
+            colorectal: {
+                title: "Understanding Colorectal Cancer",
+                content: `
+                    <p class="popup-text">Colorectal cancer starts in the colon or rectum, parts of the large intestine. It typically begins as small, benign clumps of cells called polyps that can become cancerous over time.</p>
+
+                    <h3 class="popup-subtitle">Development and Progression:</h3>
+                    <ul class="popup-list">
+                        <li>Usually develops slowly over several years</li>
+                        <li>Often begins as precancerous polyps</li>
+                        <li>Can be prevented through regular screening</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Key Symptoms:</h3>
+                    <ul class="popup-list">
+                        <li>Changes in bowel habits lasting more than a few days</li>
+                        <li>Rectal bleeding or blood in stool</li>
+                        <li>Persistent abdominal discomfort</li>
+                        <li>Unexplained weight loss</li>
+                        <li>Weakness or fatigue</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Prevention and Screening:</h3>
+                    <p class="popup-text">Regular screening should begin at age 45 for people at average risk. Those with family history or other risk factors may need to start earlier. A healthy lifestyle, including regular exercise, a diet rich in fruits, vegetables, and whole grains, and limiting processed meats can help reduce risk.</p>`
+            },
+            skin: {
+                title: "Understanding Skin Cancer",
+                content: `
+                    <p class="popup-text">Skin cancer is the most common type of cancer worldwide, primarily caused by exposure to ultraviolet (UV) radiation from the sun or tanning beds. There are several types of skin cancer, with melanoma being the most dangerous form.</p>
+
+                    <h3 class="popup-subtitle">Main Types:</h3>
+                    <ul class="popup-list">
+                        <li>Basal cell carcinoma (Most common)</li>
+                        <li>Squamous cell carcinoma</li>
+                        <li>Melanoma (Most dangerous)</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Warning Signs (ABCDE Rule):</h3>
+                    <ul class="popup-list">
+                        <li>Asymmetry - One half unlike the other</li>
+                        <li>Border - Irregular or poorly defined</li>
+                        <li>Color - Varies from one area to another</li>
+                        <li>Diameter - Larger than 6mm</li>
+                        <li>Evolving - Changing in size, shape, or color</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Prevention:</h3>
+                    <p class="popup-text">Protection from UV radiation is crucial. Use broad-spectrum sunscreen (SPF 30+), wear protective clothing, seek shade during peak sun hours, and avoid tanning beds. Regular skin self-examinations and professional skin checks are important for early detection.</p>`
+            },
+            prostate: {
+                title: "Understanding Prostate Cancer",
+                content: `
+                    <p class="popup-text">Prostate cancer is one of the most common cancers in men, developing in the prostate gland, which produces seminal fluid. While it can be serious, most men diagnosed with prostate cancer do not die from it.</p>
+
+                    <h3 class="popup-subtitle">Important Facts:</h3>
+                    <ul class="popup-list">
+                        <li>Most common cancer in men after skin cancer</li>
+                        <li>Usually grows slowly</li>
+                        <li>Highly treatable when caught early</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Common Symptoms:</h3>
+                    <ul class="popup-list">
+                        <li>Difficulty urinating</li>
+                        <li>Decreased force in urine stream</li>
+                        <li>Blood in urine or semen</li>
+                        <li>Bone pain</li>
+                        <li>Erectile dysfunction</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Risk Factors and Screening:</h3>
+                    <p class="popup-text">Risk increases with age, particularly after 50. Family history and race (particularly African American men) can increase risk. Regular screening through PSA tests and digital rectal exams is recommended for men over 50, or earlier for those at higher risk.</p>`
+            },
+            blood: {
+                title: "Understanding Blood Cancer",
+                content: `
+                    <p class="popup-text">Blood cancers affect the production and function of blood cells. These cancers typically begin in the bone marrow where blood is produced. The three main types are leukemia, lymphoma, and myeloma.</p>
+
+                    <h3 class="popup-subtitle">Major Types:</h3>
+                    <ul class="popup-list">
+                        <li>Leukemia - Affects blood and bone marrow</li>
+                        <li>Lymphoma - Affects lymphatic system</li>
+                        <li>Myeloma - Affects plasma cells</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Common Symptoms:</h3>
+                    <ul class="popup-list">
+                        <li>Persistent fatigue and weakness</li>
+                        <li>Frequent infections</li>
+                        <li>Easy bruising or bleeding</li>
+                        <li>Bone pain</li>
+                        <li>Unexplained weight loss</li>
+                    </ul>
+
+                    <h3 class="popup-subtitle">Treatment Approaches:</h3>
+                    <p class="popup-text">Treatment varies depending on the type and stage of blood cancer. Common treatments include chemotherapy, radiation therapy, stem cell transplantation, and targeted therapies. Early detection through regular blood tests can improve treatment outcomes significantly.</p>`
+            }
+        };
+
+        // Function to create and show popup
+        function showPopup(cancerType) {
+            const description = cancerDescriptions[cancerType];
+            
+            // Create popup elements
+            const overlay = document.createElement('div');
+            overlay.className = 'popup-overlay';
+            
+            const content = document.createElement('div');
+            content.className = 'popup-content';
+            content.innerHTML = `
+                <span class="popup-close">&times;</span>
+                <h2 class="popup-title">${description.title}</h2>
+                ${description.content}
+            `;
+            
+            // Add to document
+            overlay.appendChild(content);
+            document.body.appendChild(overlay);
+            
+            // Show popup
+            overlay.style.display = 'block';
+            
+            // Close button functionality
+            const closeBtn = content.querySelector('.popup-close');
+            closeBtn.onclick = () => {
+                overlay.remove();
+            };
+            
+            // Close on overlay click
+            overlay.onclick = (e) => {
+                if (e.target === overlay) {
+                    overlay.remove();
+                }
+            };
+        }
+
+        // Add click listeners to cards
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add click events to cancer type cards
+            document.querySelector('#TYPES1').children[0].onclick = () => showPopup('breast');
+            document.querySelector('#TYPES1').children[1].onclick = () => showPopup('lung');
+            document.querySelector('#TYPES1').children[2].onclick = () => showPopup('colorectal');
+            document.querySelector('#TYPES2').children[0].onclick = () => showPopup('skin');
+            document.querySelector('#TYPES2').children[1].onclick = () => showPopup('prostate');
+            document.querySelector('#TYPES2').children[2].onclick = () => showPopup('blood');
+
+            // Add hover effect to cards
+            const cards = [...document.querySelectorAll('#TYPES1 > div, #TYPES2 > div')];
+            cards.forEach(card => {
+                card.style.cursor = 'pointer';
+                card.style.transition = 'transform 0.2s ease-in-out';
+                card.onmouseenter = () => card.style.transform = 'scale(1.02)';
+                card.onmouseleave = () => card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+    <!-- chatbot -->
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "8KI2Pm_TSHrphMz-EM7gx",
+            domain: "www.chatbase.co",
+            theme: "light"
+        };
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="8KI2Pm_TSHrphMz-EM7gx"
+        domain="www.chatbase.co">
+    </script>
+
+    <!--Swiper JS script tag-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- gsap Lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="gsap.js"></script>
+</body>
+</html>
