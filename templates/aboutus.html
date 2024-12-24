@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - OncoSmart</title>
-    <link rel="stylesheet" href="../output.css">
 </head>
 <body class="overflow-x-hidden">
     
@@ -12,23 +12,28 @@
     <div class="w-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] flex justify-start flex-col max-lg:h-full" id="main">
         <div class="flex justify-between items-center w-full px-20 h-24">
             <a href="../index.html" class="font-bold text-3xl anchor">OncoSmart</a>
-            <ul class="flex justify-between w-1/2 text-xl max-lg:hidden">
-                <li><a href="../index.html" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
-                <li><a href="about.html" class="border-b-2 border-transparent hover:border-black anchor">About Us</a></li>
-                <li><a href="../CancerTypes/types.html" class="border-b-2 border-transparent hover:border-black anchor">Types of Cancers</a></li>
-                <li><a href="#" class="border-b-2 border-transparent hover:border-black anchor">Donate Us</a></li>
-            </ul>
-            <img src="../images/menu.png" alt="menu" class="hidden max-lg:block w-8" id="menu">
+           
+                <ul class="flex justify-between w-8/3 text-xl max-lg:hidden space-x-8">
+                    <li><a href="{{ url_for('home') }}" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+                    <li><a href="{{ url_for('patient_login') }}" class="border-b-2 border-transparent hover:border-black anchor">Appointment</a></li>
+                    <li><a href="{{ url_for('cancer_types') }}" class="border-b-2 border-transparent hover:border-black anchor">Blog</a></li>
+                    <li><a href="{{ url_for('doctor_ai') }}" class="border-b-2 border-transparent hover:border-black anchor">Doctor AI</a></li>
+                    <li><a href="{{ url_for('about_us') }}" class="border-b-2 border-transparent hover:border-black anchor">About us</a></li>
+                    <li><a href="{{ url_for('donate_us') }}" class="border-b-2 border-transparent hover:border-black anchor">Donate us</a></li>
+                
+             </ul>
+            <img src="{{ url_for('static', filename='images/menu.png') }}" alt="menu" class="hidden max-lg:block w-8" id="menu">
         </div>
         <div class="w-screen py-6 duration-1000 translate-y-[-300%] backdrop-blur-md transition-transform flex justify-between items-center bg-[#ffffff79]" id="menuList">
             <ul class="flex justify-between w-3/5 text-xl pl-20 max-md:w-[90%] max-md:pl-4 max-sm:flex-col max-sm:pl-20 max-sm:gap-4">
-                <li><a href="../index.html" class="border-b-2 border-transparent hover:border-black menuitems">Home</a></li>
-                <li><a href="about.html" class="border-b-2 border-transparent hover:border-black menuitems">About Us</a></li>
-                <li><a href="../CancerTypes/types.html" class="border-b-2 hover:border-black menuitems">Types of Cancers</a></li>
-                <li><a href="#" class="border-b-2 border-transparent hover:border-black menuitems">Donate Us</a></li>
+                <li><a href="{{ url_for('home') }}" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+                    <li><a href="{{ url_for('patient_login') }}" class="border-b-2 border-transparent hover:border-black anchor">Appointment</a></li>
+                    <li><a href="{{ url_for('cancer_types') }}" class="border-b-2 border-transparent hover:border-black anchor">Blog</a></li>
+                    <li><a href="{{ url_for('doctor_ai') }}" class="border-b-2 border-transparent hover:border-black anchor">Doctor AI</a></li>
+                    <li><a href="{{ url_for('about_us') }}" class="border-b-2 border-transparent hover:border-black anchor">About us</a></li>
+                    <li><a href="{{ url_for('donate_us') }}" class="border-b-2 border-transparent hover:border-black anchor">Donate us</a></li>
             </ul>
-            <img src="../images/close.png" alt="close" class="w-12 pr-6" id="close">
-        </div>
+            <img src="{{ url_for('static', filename='images/close.png') }}" alt="close" class="w-12 pr-6" id="close">  </div>
         
         <div class="flex w-full justify-center items-center px-20 pb-[100px] relative max-lg:px-6">
             <div class="text-center w-3/5 max-lg:w-[90%]">
@@ -44,13 +49,13 @@
             <h1 class="text-center font-bold text-5xl max-lg:text-3xl">Our Mission</h1>
             <h2 class="text-center font-semibold text-3xl py-4 max-lg:text-2xl">Spreading Awareness, Saving Lives</h2>
             <p class="text-2xl text-center max-lg:text-xl">At OncoSmart, our mission is to empower individuals with the knowledge and tools they need to recognize early warning signs of cancer. By providing accurate information, self-assessment resources, and a supportive community, we strive to make early detection accessible to all, ultimately saving lives and improving health outcomes.</p>
-            <img src="../images/medical1.jpg" alt="medical" class="text-center w-1/4 mx-auto py-9 max-md:w-3/5">
+            <img src="{{ url_for('static', filename='images/medical1.png') }}"alt="medical" class="text-center w-1/4 mx-auto py-9 max-md:w-3/5">
         </div>
         <div class="w-full scroll1">
             <h1 class="text-center font-bold text-5xl max-lg:text-3xl">Our Vision</h1>
             <h2 class="text-center font-semibold text-3xl py-4 max-lg:text-2xl">A Future Free of Late Cancer Diagnoses</h2>
             <p class="text-2xl text-center max-lg:text-xl">We envision a world where everyone has the awareness and resources to act early, reducing the number of preventable cancer cases. OncoSmart aims to be a global leader in cancer awareness, fostering a society where informed decisions lead to healthier, longer lives.</p>
-            <img src="../images/medical2.jpg" alt="medical" class="text-center w-1/4 mx-auto py-9 max-md:w-3/5">
+            <img src="{{ url_for('static', filename='imagesmedical2.png') }}" alt="medical" class="text-center w-1/4 mx-auto py-9 max-md:w-3/5">
         </div>
     </div>
     
@@ -123,7 +128,41 @@
 
         </div>
     </div>
-
+    <footer class="bg-blue-500 text-white py-6">
+        <div class="container mx-auto px-4 md:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- About Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">About Us</h3>
+              <p class="text-sm text-gray-200">We are committed to providing quality healthcare services and ensuring your well-being. Contact us for more information about our services.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+              <ul class="text-sm space-y-1">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">Services</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+                <li><a href="#" class="hover:underline">FAQ</a></li>
+              </ul>
+            </div>
+            <!-- Contact Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+              <ul class="text-sm space-y-1">
+                <li><span class="font-medium">Phone:</span> (123) 456-7890</li>
+                <li><span class="font-medium">Email:</span> contact@healthcare.com</li>
+                <li><span class="font-medium">Address:</span> 123 Main St, City, Country</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Copyright Section -->
+          <div class="text-center text-sm text-gray-300 mt-6">
+            <p>&copy; 2024 Healthcare Services. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    
 
     <!-- chatbot -->
     <script>
@@ -193,6 +232,19 @@
         menubtn.addEventListener("click", () => {
             tl.play();
         })  
+        let menu = document.querySelector("#menu");
+        let menulist = document.querySelector("#menuList");
+        let close = document.querySelector("#close");
+
+        menu.addEventListener("click", () => {
+            menulist.classList.remove("translate-y-[-300%]");
+            menulist.classList.add("translate-y-[-96px]");
+        })
+        close.addEventListener("click", () => {
+            menulist.classList.add("translate-y-[-300%]");
+            menulist.classList.remove("translate-y-[-96px]");
+            console.log("close");
+        })
     </script>
     <script src="../header.js"></script>
 </body>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - OncoSmart</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="w-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] flex justify-start flex-col max-lg:h-full" id="main">
+    <div class="flex justify-between items-center w-full px-20 h-24">
+        <a href="index.html" class="font-bold text-3xl">OncoSmart</a>
+        <ul class="flex justify-between w-3/5 text-xl max-lg:hidden">
+            <li><a href="{{ url_for('home') }}" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+            <li><a href="{{ url_for('patient_login') }}" class="border-b-2 border-transparent hover:border-black anchor">Appointment</a></li>
+            <li><a href="{{ url_for('cancer_types') }}" class="border-b-2 border-transparent hover:border-black anchor">Blog</a></li>
+            <li><a href="{{ url_for('doctor_ai') }}" class="border-b-2 border-transparent hover:border-black anchor">Doctor AI</a></li>
+            <li><a href="{{ url_for('about_us') }}" class="border-b-2 border-transparent hover:border-black anchor">About us</a></li>
+            <li><a href="{{ url_for('donate_us') }}" class="border-b-2 border-transparent hover:border-black anchor">Donate us</a></li>
+        
+               </ul>
+        <img src="images/menu.png" alt="menu" class="hidden max-lg:block w-8" id="menu">
+    </div>
+    <div class="w-screen py-6 duration-1000 translate-y-[-300%] backdrop-blur-md transition-transform flex justify-between items-center bg-[#ffffff79]" id="menuList">
+        <ul class="flex justify-between w-3/5 text-xl pl-20 max-md:w-[90%] max-md:pl-4 max-sm:flex-col max-sm:pl-20 max-sm:gap-4">
+            <li><a href="{{ url_for('home') }}" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+            <li><a href="{{ url_for('patient_login') }}" class="border-b-2 border-transparent hover:border-black anchor">Appointment</a></li>
+            <li><a href="{{ url_for('cancer_types') }}" class="border-b-2 border-transparent hover:border-black anchor">Blog</a></li>
+            <li><a href="{{ url_for('doctor_ai') }}" class="border-b-2 border-transparent hover:border-black anchor">Doctor AI</a></li>
+            <li><a href="{{ url_for('about_us') }}" class="border-b-2 border-transparent hover:border-black anchor">About us</a></li>
+            <li><a href="{{ url_for('donate_us') }}" class="border-b-2 border-transparent hover:border-black anchor">Donate us</a></li>
+        </ul>
+        <img src="./images/close.png" alt="close" class="w-12 pr-6" id="close">
+    </div>
+  
+    <div class="w-[90%] mx-auto my-14">
+        <!-- Page Title -->
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">Make a Difference with Your Donation</h1>
+        <p class="text-lg text-center text-gray-600 mb-10">
+            Your contributions can help support cancer patients and spread awareness about early detection. Below are some trusted NGOs in Pakistan working tirelessly for healthcare and cancer support.
+        </p>
+        
+        <!-- NGOs Section -->
+        <div class="flex flex-wrap justify-center items-center w-[90%] mx-auto">
+            <!-- NGO 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 w-[500px] mr-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Shaukat Khanum Memorial Cancer Hospital</h2>
+                <p class="text-gray-700 mb-4">
+                    A leading institution providing comprehensive cancer care and treatment to patients in Pakistan.
+                </p>
+                <a href="https://www.shaukatkhanum.org.pk/donate/" target="_blank" 
+                   class="text-blue-500 font-semibold hover:underline">Donate Now</a>
+            </div>
+            <!-- NGO 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 w-[500px] mr-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Indus Hospital</h2>
+                <p class="text-gray-700 mb-4">
+                    Indus Hospital provides free cancer treatments and medical care to underprivileged communities.
+                </p>
+                <a href="https://indushospital.org.pk/donate/" target="_blank" 
+                   class="text-blue-500 font-semibold hover:underline">Donate Now</a>
+            </div>
+            <!-- NGO 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 w-[500px] mr-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Edhi Foundation</h2>
+                <p class="text-gray-700 mb-4">
+                    Edhi Foundation supports various healthcare initiatives, including cancer patient assistance and treatments.
+                </p>
+                <a href="https://edhi.org/donate/" target="_blank" 
+                   class="text-blue-500 font-semibold hover:underline">Donate Now</a>
+            </div>
+            <!-- NGO 4 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 w-[500px] mr-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Alkhidmat Foundation Pakistan</h2>
+                <p class="text-gray-700 mb-4">
+                    Alkhidmat Foundation is one of the leading non-profit organizations in Pakistan, providing a wide range of humanitarian services, including medical care and cancer treatment assistance for underprivileged communities.
+                </p>
+                <a href="https://alkhidmat.org/donate/" target="_blank" 
+                   class="text-blue-500 font-semibold hover:underline">Donate Now</a>
+            </div>
+            <!-- NGO 5 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 w-[500px] mr-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Saylani Welfare Trust</h2>
+                <p class="text-gray-700 mb-4">
+                    Saylani Welfare Trust supports healthcare programs, including those aiding cancer patients.
+                </p>
+                <a href="https://saylaniwelfare.com/en/donate" target="_blank" 
+                   class="text-blue-500 font-semibold hover:underline">Donate Now</a>
+            </div>
+            <!-- NGO 6 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 w-[500px] mr-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">LRBT (Layton Rahmatulla Benevolent Trust)</h2>
+                <p class="text-gray-700 mb-4">
+                    LRBT offers free treatment for patients in need, including some cancer-related conditions.
+                </p>
+                <a href="https://www.lrbt.org.pk/donate/" target="_blank" 
+                   class="text-blue-500 font-semibold hover:underline">Donate Now</a>
+            </div>
+        </div>
+        
+        <!-- Closing Message -->
+        <div class="mt-14 text-center">
+            <p class="text-lg text-gray-700">
+                Together, we can make a significant impact in the fight against cancer. Every contribution counts!
+            </p>
+        </div>
+    </div>
+</div>
+    <footer class="bg-blue-500 text-white py-6">
+        <div class="container mx-auto px-4 md:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- About Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">About Us</h3>
+              <p class="text-sm text-gray-200">We are committed to providing quality healthcare services and ensuring your well-being. Contact us for more information about our services.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+              <ul class="text-sm space-y-1">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">Services</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+                <li><a href="#" class="hover:underline">FAQ</a></li>
+              </ul>
+            </div>
+            <!-- Contact Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+              <ul class="text-sm space-y-1">
+                <li><span class="font-medium">Phone:</span> (123) 456-7890</li>
+                <li><span class="font-medium">Email:</span> contact@healthcare.com</li>
+                <li><span class="font-medium">Address:</span> 123 Main St, City, Country</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Copyright Section -->
+          <div class="text-center text-sm text-gray-300 mt-6">
+            <p>&copy; 2024 Healthcare Services. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+      <script>  
+        let menu = document.querySelector("#menu");
+        let menulist = document.querySelector("#menuList");
+        let close = document.querySelector("#close");
+
+        menu.addEventListener("click", () => {
+            menulist.classList.remove("translate-y-[-300%]");
+            menulist.classList.add("translate-y-[-96px]");
+        })
+        close.addEventListener("click", () => {
+            menulist.classList.add("translate-y-[-300%]");
+            menulist.classList.remove("translate-y-[-96px]");
+            console.log("close");
+        })
+      </script>
+</body>
+</html>

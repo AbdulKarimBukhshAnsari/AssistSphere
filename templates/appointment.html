@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schedule Appointment</title>
-  <link rel="stylesheet" href="output.css">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes fadeIn {
       from {
@@ -20,17 +21,19 @@
   </style>
 </head>
 <body class="bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] min-h-screen flex items-center justify-center p-4">
+  
   <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-4xl flex flex-col lg:flex-row items-center gap-6 fade-in">
+    
     <!-- Image Section -->
     <div class="hidden lg:block w-full max-w-sm">
-      <img src="images/doctor.png" alt="Doctor illustration" class="rounded-md shadow-md">
+      <img src="{{ url_for('static', filename='images/doctor.png') }}" alt="Doctor illustration" class="rounded-md shadow-md">
     </div>
 
     <!-- Form Section -->
     <div class="w-full">
       <h1 class="text-3xl font-bold text-center text-gray-800 mb-4">Schedule Your Appointment</h1>
       <p class="text-sm text-gray-600 text-center mb-6">We’re here to provide you with the care and support you need. Please fill out the form below to request an appointment with our specialists.</p>
-      <form id="appointmentForm" class="space-y-4">
+      <form  action="appointment.html"method="POST"id="appointmentForm" class="space-y-4">
         <div>
           <label for="fullName" class="block text-gray-700 font-medium">Full Name</label>
           <input type="text" id="fullName" name="fullName" required class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none">
@@ -71,23 +74,23 @@
           <label for="previousTreatments" class="block text-gray-700 font-medium">Previous Treatments (if any)</label>
           <textarea id="previousTreatments" name="previousTreatments" rows="3" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
         </div>
-        <button type="submit" class="w-full bg-blue-500 text-white font-medium py-3 rounded-md hover:bg-blue-600 transition duration-300">Request Appointment</button>
+        <button type="submit" value="submit"  class="w-full bg-blue-500 text-white font-medium py-3 rounded-md hover:bg-blue-600 transition duration-300">Request Appointment</button>
       </form>
       <p id="successMessage" class="mt-4 text-green-600 font-medium text-center hidden">Your appointment request has been submitted!</p>
     </div>
   </div>
-  <script>
+   <script>
     const form = document.getElementById('appointmentForm');
     const successMessage = document.getElementById('successMessage');
 
     form.addEventListener('submit', function(event) {
-      event.preventDefault();
+      
       successMessage.classList.remove('hidden');
-      form.reset();
+     
       setTimeout(() => {
         successMessage.classList.add('hidden');
       }, 3000);
     });
-  </script>
+  </script> 
 </body>
 </html>

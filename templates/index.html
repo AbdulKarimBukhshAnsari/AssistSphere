@@ -2,41 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OncoSmart: Your Partner in Emergency Excellence</title>
-    <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!--Swiper JS CSS Link-->
 </head>
 <body class="overflow-x-hidden">
 
     <!-- main section -->
     <div class="w-full h-[550px] bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] flex justify-start flex-col max-lg:h-full" id="main">
+       
+       
         <div class="flex justify-between items-center w-full px-20 h-24">
             <a href="index.html" class="font-bold text-3xl">OncoSmart</a>
-            <ul class="flex justify-between w-1/2 text-xl max-lg:hidden">
-                <li><a href="index.html" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
-                <li><a href="About Us/about.html" class="border-b-2 border-transparent hover:border-black anchor">About Us</a></li>
-                <li><a href="CancerTypes/types.html" class="border-b-2 border-transparent hover:border-black anchor">Types of Cancers</a></li>
-                <li><a href="#" class="border-b-2 border-transparent hover:border-black anchor">Donate Us</a></li>
-            </ul>
+            <ul class="flex justify-between w-3/5 text-xl max-lg:hidden">
+                <li><a href="{{ url_for('home') }}" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+                <li><a href="{{ url_for('patient_login') }}" class="border-b-2 border-transparent hover:border-black anchor">Appointment</a></li>
+                <li><a href="{{ url_for('cancer_types') }}" class="border-b-2 border-transparent hover:border-black anchor">Blog</a></li>
+                <li><a href="{{ url_for('doctor_ai') }}" class="border-b-2 border-transparent hover:border-black anchor">Doctor AI</a></li>
+                <li><a href="{{ url_for('about_us') }}" class="border-b-2 border-transparent hover:border-black anchor">About us</a></li>
+                <li><a href="{{ url_for('donate_us') }}" class="border-b-2 border-transparent hover:border-black anchor">Donate us</a></li>
+            
+                   </ul>
             <img src="images/menu.png" alt="menu" class="hidden max-lg:block w-8" id="menu">
         </div>
         <div class="w-screen py-6 duration-1000 translate-y-[-300%] backdrop-blur-md transition-transform flex justify-between items-center bg-[#ffffff79]" id="menuList">
             <ul class="flex justify-between w-3/5 text-xl pl-20 max-md:w-[90%] max-md:pl-4 max-sm:flex-col max-sm:pl-20 max-sm:gap-4">
-                <li><a href="index.html" class="border-b-2 border-transparent hover:border-black menuitems">Home</a></li>
-                <li><a href="About Us/about.html" class="border-b-2 border-transparent hover:border-black menuitems">About Us</a></li>
-                <li><a href="CancerTypes/types.html" class="border-b-2 border-transparent hover:border-black menuitems">Types of Cancers</a></li>
-                <li><a href="#" class="border-b-2 border-transparent hover:border-black menuitems">Donate Us</a></li>
+                <li><a href="{{ url_for('home') }}" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+                <li><a href="{{ url_for('patient_login') }}" class="border-b-2 border-transparent hover:border-black anchor">Appointment</a></li>
+                <li><a href="{{ url_for('cancer_types') }}" class="border-b-2 border-transparent hover:border-black anchor">Blog</a></li>
+                <li><a href="{{ url_for('doctor_ai') }}" class="border-b-2 border-transparent hover:border-black anchor">Doctor AI</a></li>
+                <li><a href="{{ url_for('about_us') }}" class="border-b-2 border-transparent hover:border-black anchor">About us</a></li>
+                <li><a href="{{ url_for('donate_us') }}" class="border-b-2 border-transparent hover:border-black anchor">Donate us</a></li>
             </ul>
-            <img src="images/close.png" alt="close" class="w-12 pr-6" id="close">
+            <img src="./images/close.png" alt="close" class="w-12 pr-6" id="close">
         </div>
         
         <div class="flex w-full h-full justify-between items-end px-20 relative overflow-hidden max-lg:flex-col">
             <div class="flex flex-col w-1/2 justify-center items-start h-full max-lg:w-full max-lg:text-center">
+                <br>
                 <h1 class="font-bold text-5xl pb-10 max-lg:py-9 max-sm:text-3xl bannerText">Prepare. Respond. Save Lives.</h1>
                 <p class="text-2xl max-sm:text-lg bannerText">OncoSmart empowers individuals with knowledge about cancer symptoms. Learn to recognize early warning signs, access helpful resources, and take proactive steps towards early detection and better health outcomes.</p>
             </div>
-            <div class="relative top-[72px]"><img src="images/banner.svg" alt="banner" class="w-[750px] max-sm:w-[200%]"></div>
+            <div class="relative top-[72px]"><img src="{{ url_for('static', filename='images/banner.svg') }}" alt="banner" class="w-[750px] max-sm:w-[200%]"></div>
         </div>
     </div>
 
@@ -45,17 +53,19 @@
         <!-- First Row with 3 Cards -->
         <div class="flex justify-center gap-6 flex-row items-center mt-6 flex-wrap" id="info1">
             <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
-                <img src="images/icon1.png" alt="icon" class="w-20">
+                <img src="{{ url_for('static', filename='images/icon1.png') }}" alt="icon" class="w-20">
+                <!-- <img src="./images/icon1.png" alt="icon" class="w-20"> -->
                 <h1 class="text-xl font-bold mt-5">Early Detection Matters</h1>
                 <p class="text-gray-600">Recognize the warning signs early to improve the chances of successful treatment and recovery.</p>
             </div>
             <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
-                <img src="images/icon2.png" alt="icon" class="w-20">
+                <img src="{{ url_for('static', filename='images/icon2.png') }}" alt="icon" class="w-20">
                 <h1 class="text-xl font-bold mt-5">Common Cancer Symptoms</h1>
                 <p class="text-gray-600">Learn about common symptoms such as persistent fatigue, unexplained weight loss, or unusual lumps.</p>
             </div>
             <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
-                <img src="images/icon3.png" alt="icon" class="w-20">
+                <img src="{{ url_for('static', filename='images/icon3.png') }}" alt="icon" class="w-20">
+        
                 <h1 class="text-xl font-bold mt-5">When to Seek Help</h1>
                 <p class="text-gray-600">Know when it's crucial to consult a healthcare professional for further screening and diagnosis.</p>
             </div>
@@ -64,22 +74,25 @@
         <!-- Second Row with 4 Cards -->
         <div class="flex justify-center gap-6 flex-row items-center mt-6 flex-wrap mb-[60px]" id="info2">
             <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
-                <img src="images/icon4.png" alt="icon" class="w-20">
+                <img src="{{ url_for('static', filename='images/icon4.png') }}" alt="icon" class="w-20">
+  
                 <h1 class="text-xl font-bold mt-5">Understanding Risk Factors</h1>
                 <p class="text-gray-600">Explore how lifestyle, genetics, and environmental factors contribute to cancer risks.</p>
             </div>
             <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
-                <img src="images/icon5.png" alt="icon" class="w-20">
+                <img src="{{ url_for('static', filename='images/icon5.png') }}" alt="icon" class="w-20">
+
                 <h1 class="text-xl font-bold mt-5">Support and Resources</h1>
                 <p class="text-gray-600">Access information on support groups, treatment options, and caregiving tips for cancer patients.</p>
             </div>
             <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
-                <img src="images/icon6.png" alt="icon" class="w-20">
+                <img src="{{ url_for('static', filename='images/icon1.png') }}" alt="icon" class="w-20">
                 <h1 class="text-xl font-bold mt-5">Healthy Living Tips</h1>
                 <p class="text-gray-600">Adopt habits that reduce your risk of cancer, including a balanced diet, exercise, and regular check-ups.</p>
             </div>
             <div class="p-5 bg-white shadow-lg rounded-lg w-[300px]">
-                <img src="images/icon7.png" alt="icon" class="w-20">
+                <img src="{{ url_for('static', filename='images/icon7.png') }}" alt="icon" class="w-20">
+
                 <h1 class="text-xl font-bold mt-5">Latest Research Insights</h1>
                 <p class="text-gray-600">Stay updated with breakthroughs in cancer research and new treatment advancements.</p>
             </div>
@@ -93,7 +106,8 @@
           <!-- Slides -->
           <div class="swiper-slide p-11">
             <div class="flex items-center gap-4">
-                <img src="images/person2.jpg" alt="person" class="w-1h-12 h-12 rounded-full">
+                <img src="{{ url_for('static', filename='images/person2.jpg') }}" alt="icon"  class="w-1h-12 h-12 rounded-full">
+         
                 <h1 class="text-2xl font-semibold">John Doe</h1>
             </div>
             <p class="mt-4 text-gray-600 text-lg">"OncoSmart has been a game-changer in raising awareness about cancer symptoms. It's a platform everyone should know about!"</p>
@@ -101,7 +115,7 @@
         
         <div class="swiper-slide p-11">
             <div class="flex items-center gap-4">
-                <img src="images/person1.jpg" alt="person" class="w-1h-12 h-12 rounded-full">
+               <img src="{{ url_for('static', filename='images/person1.jpg') }}"  alt="person" class="w-1h-12 h-12 rounded-full">
                 <h1 class="text-2xl font-semibold">Sarah Taylor</h1>
             </div>
             <p class="mt-4 text-gray-600 text-lg">"The insights and resources here helped me encourage my loved ones to get screened early. A truly life-saving initiative!"</p>
@@ -109,7 +123,7 @@
         
         <div class="swiper-slide p-11">
             <div class="flex items-center gap-4">
-                <img src="images/person4.jpg" alt="person" class="w-1h-12 h-12 rounded-full">
+                <img src="{{ url_for('static', filename='images/person4.jpg') }}"   alt="person" class="w-1h-12 h-12 rounded-full">
                 <h1 class="text-2xl font-semibold">Michael Smith</h1>
             </div>
             <p class="mt-4 text-gray-600 text-lg">"I learned so much about identifying early signs of cancer through OncoSmart. It's an invaluable tool for awareness." </p>
@@ -130,65 +144,41 @@
       
       </div>
 
-      <div class="w-[90%] mx-auto my-11">
-        <h1 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h1>
-        <div>
-            <div class="flex w-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] sliders justify-between items-center p-4 border-b-2 border-slate-400 cursor-pointer"> 
-                <p class="text-2xl">What is OncoSmart?</p>
-                <img src="images/add.png" alt="add" class="w-6">
+      <footer class="bg-blue-500 text-white py-6">
+        <div class="container mx-auto px-4 md:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- About Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">About Us</h3>
+              <p class="text-sm text-gray-200">We are committed to providing quality healthcare services and ensuring your well-being. Contact us for more information about our services.</p>
             </div>
-            <div class="h-0 overflow-hidden sliderAns bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] text-2xl border-b-2 border-slate-400 transition-height duration-1000">
-                <span>OncoSmart is an educational platform designed to raise awareness about cancer symptoms. It provides valuable resources, expert insights, and tools to help individuals recognize early warning signs and take proactive steps toward early detection.</span>
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+              <ul class="text-sm space-y-1">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">Services</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+                <li><a href="#" class="hover:underline">FAQ</a></li>
+              </ul>
             </div>
+            <!-- Contact Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+              <ul class="text-sm space-y-1">
+                <li><span class="font-medium">Phone:</span> (123) 456-7890</li>
+                <li><span class="font-medium">Email:</span> contact@healthcare.com</li>
+                <li><span class="font-medium">Address:</span> 123 Main St, City, Country</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Copyright Section -->
+          <div class="text-center text-sm text-gray-300 mt-6">
+            <p>&copy; 2024 Healthcare Services. All rights reserved.</p>
+          </div>
         </div>
-        <div>
-            <div class="flex w-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] sliders justify-between items-center p-4 border-b-2 border-slate-400 cursor-pointer"> 
-                <p class="text-2xl">Who can use OncoSmart?</p>
-                <img src="images/add.png" alt="add" class="w-6">
-            </div>
-            <div class="h-0 overflow-hidden sliderAns bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] text-2xl border-b-2 border-slate-400 transition-height duration-1000">
-                <span>OncoSmart is for everyone. Whether you're a patient, a caregiver, or simply someone who wants to learn about cancer symptoms and prevention, our platform is designed to provide the information and support you need.</span>
-            </div>
-        </div>
-        <div>
-            <div class="flex w-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] sliders justify-between items-center p-4 border-b-2 border-slate-400 cursor-pointer"> 
-                <p class="text-2xl">What resources does OncoSmart offer?</p>
-                <img src="images/add.png" alt="add" class="w-6">
-            </div>
-            <div class="h-0 overflow-hidden sliderAns bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] text-2xl border-b-2 border-slate-400 transition-height duration-1000">
-                <span>OncoSmart offers a wealth of resources, including detailed guides on cancer symptoms, risk factors, and preventive measures. You’ll also find tools for self-assessment, expert articles, and access to support communities.</span>
-            </div>
-        </div>
-        <div>
-            <div class="flex w-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] sliders justify-between items-center p-4 border-b-2 border-slate-400 cursor-pointer"> 
-                <p class="text-2xl">How can I detect cancer symptoms early?</p>
-                <img src="images/add.png" alt="add" class="w-6">
-            </div>
-            <div class="h-0 overflow-hidden sliderAns bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] text-2xl border-b-2 border-slate-400 transition-height duration-1000">
-                <span>OncoSmart provides information about early warning signs for various types of cancer, such as persistent fatigue, unexplained weight loss, unusual lumps, or prolonged cough. Regular check-ups and awareness are key to early detection.</span>
-            </div>
-        </div>
-        <div>
-            <div class="flex w-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] sliders justify-between items-center p-4 border-b-2 border-slate-400 cursor-pointer"> 
-                <p class="text-2xl">Can OncoSmart replace a doctor?</p>
-                <img src="images/add.png" alt="add" class="w-6">
-            </div>
-            <div class="h-0 overflow-hidden sliderAns bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] text-2xl border-b-2 border-slate-400 transition-height duration-1000">
-                <span>No, OncoSmart is not a substitute for professional medical advice. While it provides valuable educational resources, we strongly encourage consulting a qualified healthcare professional for diagnosis and treatment.</span>
-            </div>
-        </div>
-        <div>
-            <div class="flex w-full bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] sliders justify-between items-center p-4 border-b-2 border-slate-400 cursor-pointer"> 
-                <p class="text-2xl">Is OncoSmart free to use?</p>
-                <img src="images/add.png" alt="add" class="w-6">
-            </div>
-            <div class="h-0 overflow-hidden sliderAns bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] text-2xl border-b-2 border-slate-400 transition-height duration-1000">
-                <span>Yes, OncoSmart is free for everyone. Our mission is to make cancer awareness accessible to as many people as possible. All our educational resources are available without any cost.</span>
-            </div>
-        </div>
-    </div>
+      </footer>
     
-
     <!-- chatbot -->
     <script>
         window.embeddedChatbotConfig = {
@@ -206,10 +196,84 @@
     <!--Swiper JS script tag-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- gsap Lib -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
-    <script src="header.js"></script>
-    <script src="gsap.js"></script>
+
+    <script>
+        
+        let menu = document.querySelector("#menu");
+        let menulist = document.querySelector("#menuList");
+        let close = document.querySelector("#close");
+
+        menu.addEventListener("click", () => {
+            menulist.classList.remove("translate-y-[-300%]");
+            menulist.classList.add("translate-y-[-96px]");
+        })
+        close.addEventListener("click", () => {
+            menulist.classList.add("translate-y-[-300%]");
+            menulist.classList.remove("translate-y-[-96px]");
+            console.log("close");
+        })
+        // swiper JS
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+        
+            // If we need pagination
+            pagination: {
+            el: '.swiper-pagination',
+            },
+        
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+        
+        });
+        gsap.from(".anchor", {
+            opacity: 0,
+            delay: 0.5,
+            duration: 1, 
+            x: 100,
+            stagger: 0.3
+        });
+        gsap.from(".bannerText", {
+            opacity: 0,
+            delay: 0.5,
+            duration: 1, 
+            y: 100,
+            stagger: 0.3
+        });
+        gsap.from("#info1", {
+            opacity: 0,
+            delay: 0.5,
+            duration: 1, 
+            y: 100,
+            stagger: 0.3
+        });
+        gsap.from("#info2", {
+            opacity: 0,
+            duration: 1, 
+            delay: 0.5,
+            y: 100,
+            scrollTrigger: "#info2",
+        });
+
+        let tl = gsap.timeline();
+        tl.from(".menuitems", {
+            opacity: 0,
+            delay: 0.5,
+            duration: 1,
+            x: 100,
+            stagger: 0.3
+        })
+        tl.pause();
+        let menubtn = document.querySelector("#menu");
+        menubtn.addEventListener("click", () => {
+            tl.play();
+        })  
+    </script>
 </body>
 </html>

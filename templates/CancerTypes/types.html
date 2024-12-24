@@ -4,35 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Types of Cancer | OncoSmart</title>
-    <link rel="stylesheet" href="output.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./type.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body class="overflow-x-hidden">
     <!-- main section -->
-    <div class="w-full h-[300px] bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] flex justify-start flex-col max-lg:h-full" id="main">
+    <div class="w-full h-[400px] bg-gradient-to-r from-[#b0d9f7] to-[#e9c7d8] flex justify-start flex-col max-lg:h-full" id="main">
         <div class="flex justify-between items-center w-full px-20 h-24">
             <a href="../index.html" class="font-bold text-3xl">OncoSmart</a>
-            <ul class="flex justify-between w-1/2 text-xl max-lg:hidden">
-                <li><a href="../index.html" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
-                <li><a href="../About Us/about.html" class="border-b-2 border-transparent hover:border-black anchor">About Us</a></li>
-                <li><a href="types.html" class="border-b-2 border-transparent hover:border-black anchor">Types of Cancers</a></li>
-                <li><a href="#" class="border-b-2 border-transparent hover:border-black anchor">Donate Us</a></li>
-            </ul>
-            <img src="../images/menu.png" alt="menu" class="hidden max-lg:block w-8" id="menu">
+            <ul class="flex justify-between w-8/5 text-xl max-lg:hidden">
+                <ul class="flex justify-between w-8/3 text-xl max-lg:hidden space-x-8">
+                    <li><a href="{{ url_for('home') }}" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+                    <li><a href="{{ url_for('patient_login') }}" class="border-b-2 border-transparent hover:border-black anchor">Appointment</a></li>
+                    <li><a href="{{ url_for('cancer_types') }}" class="border-b-2 border-transparent hover:border-black anchor">Blog</a></li>
+                    <li><a href="{{ url_for('doctor_ai') }}" class="border-b-2 border-transparent hover:border-black anchor">Doctor AI</a></li>
+                    <li><a href="{{ url_for('about_us') }}" class="border-b-2 border-transparent hover:border-black anchor">About us</a></li>
+                    <li><a href="{{ url_for('donate_us') }}" class="border-b-2 border-transparent hover:border-black anchor">Donate us</a></li>
+                
+                                  </ul>
+            <img src="images/menu.png" alt="menu" class="hidden max-lg:block w-8" id="menu">
         </div>
         <div class="w-screen py-6 duration-1000 translate-y-[-300%] backdrop-blur-md transition-transform flex justify-between items-center bg-[#ffffff79]" id="menuList">
             <ul class="flex justify-between w-3/5 text-xl pl-20 max-md:w-[90%] max-md:pl-4 max-sm:flex-col max-sm:pl-20 max-sm:gap-4">
-                <li><a href="..../About Us/about.htmlindex.html" class="border-b-2 border-transparent hover:border-black menuitems">Home</a></li>
-                <li><a href="../About Us/about.html" class="border-b-2 border-transparent hover:border-black menuitems">About Us</a></li>
-                <li><a href="types.html" class="border-b-2 hover:border-black menuitems">Types of Cancers</a></li>
-                <li><a href="#" class="border-b-2 border-transparent hover:border-black menuitems">Donate Us</a></li>
+                <li><a href="{{ url_for('home') }}" class="border-b-2 border-transparent hover:border-black anchor">Home</a></li>
+                    <li><a href="{{ url_for('patient_login') }}" class="border-b-2 border-transparent hover:border-black anchor">Appointment</a></li>
+                    <li><a href="{{ url_for('cancer_types') }}" class="border-b-2 border-transparent hover:border-black anchor">Blog</a></li>
+                    <li><a href="{{ url_for('doctor_ai') }}" class="border-b-2 border-transparent hover:border-black anchor">Doctor AI</a></li>
+                    <li><a href="{{ url_for('about_us') }}" class="border-b-2 border-transparent hover:border-black anchor">About us</a></li>
+                    <li><a href="{{ url_for('donate_us') }}" class="border-b-2 border-transparent hover:border-black anchor">Donate us</a></li>
+                
             </ul>
-            <img src="../images/close.png" alt="close" class="w-12 pr-6" id="close">
+            <img src="images/close.png" alt="close" class="w-12 pr-6" id="close">
         </div>
         
-        <div class="flex w-full justify-center items-center px-20 pb-9 relative">
+        <div class="flex w-full justify-center items-center px-20 relative">
             <div class="text-center">
                 <h1 class="font-bold text-5xl pb-6 max-lg:py-9 max-sm:text-3xl">Types of Cancer</h1>
                 <p class="text-xl max-sm:text-lg">Understanding different types of cancer and their early warning signs</p>
@@ -123,7 +128,41 @@
             </div>
         </div>
     </div>
-
+    <footer class="bg-blue-500 text-white py-6">
+        <div class="container mx-auto px-4 md:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- About Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">About Us</h3>
+              <p class="text-sm text-gray-200">We are committed to providing quality healthcare services and ensuring your well-being. Contact us for more information about our services.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+              <ul class="text-sm space-y-1">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">Services</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+                <li><a href="#" class="hover:underline">FAQ</a></li>
+              </ul>
+            </div>
+            <!-- Contact Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+              <ul class="text-sm space-y-1">
+                <li><span class="font-medium">Phone:</span> (123) 456-7890</li>
+                <li><span class="font-medium">Email:</span> contact@healthcare.com</li>
+                <li><span class="font-medium">Address:</span> 123 Main St, City, Country</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Copyright Section -->
+          <div class="text-center text-sm text-gray-300 mt-6">
+            <p>&copy; 2024 Healthcare Services. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    
     <script>
         // Add any interactive features here
         document.addEventListener('DOMContentLoaded', () => {
@@ -365,7 +404,20 @@
         chatbotId="8KI2Pm_TSHrphMz-EM7gx"
         domain="www.chatbase.co">
     </script>
+    <script>
+        let menu = document.querySelector("#menu");
+        let menulist = document.querySelector("#menuList");
+        let close = document.querySelector("#close");
 
-    <script src="../header.js"></script>
+        menu.addEventListener("click", () => {
+            menulist.classList.remove("translate-y-[-300%]");
+            menulist.classList.add("translate-y-[-96px]");
+        })
+        close.addEventListener("click", () => {
+            menulist.classList.add("translate-y-[-300%]");
+            menulist.classList.remove("translate-y-[-96px]");
+            console.log("close");
+        })
+    </script>
 </body>
 </html>
