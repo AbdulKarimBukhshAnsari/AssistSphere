@@ -46,7 +46,7 @@
             <p class="text-2xl text-center max-lg:text-xl">At OncoSmart, our mission is to empower individuals with the knowledge and tools they need to recognize early warning signs of cancer. By providing accurate information, self-assessment resources, and a supportive community, we strive to make early detection accessible to all, ultimately saving lives and improving health outcomes.</p>
             <img src="../images/medical1.jpg" alt="medical" class="text-center w-1/4 mx-auto py-9 max-md:w-3/5">
         </div>
-        <div class="w-full bannerText">
+        <div class="w-full scroll1">
             <h1 class="text-center font-bold text-5xl max-lg:text-3xl">Our Vision</h1>
             <h2 class="text-center font-semibold text-3xl py-4 max-lg:text-2xl">A Future Free of Late Cancer Diagnoses</h2>
             <p class="text-2xl text-center max-lg:text-xl">We envision a world where everyone has the awareness and resources to act early, reducing the number of preventable cancer cases. OncoSmart aims to be a global leader in cancer awareness, fostering a society where informed decisions lead to healthier, longer lives.</p>
@@ -55,7 +55,7 @@
     </div>
     
     <!-- choosing OncoSmart -->
-    <div class="w-[90%] mx-auto mb-14">
+    <div class="w-[90%] mx-auto mb-14 scroll2">
         <!-- How OncoSmart Works Section -->
         <div class="mb-14 bannerText">
             <h1 class="text-5xl font-bold mb-6 text-center max-lg:text-3xl">How OncoSmart Works</h1>
@@ -108,7 +108,7 @@
     </div>
     
     <!-- Contributors Section -->
-    <div class="text-center">
+    <div class="text-center scroll3">
         <h2 class="text-5xl font-bold mb-4 max-lg:text-3xl">Meet the Team Behind OncoSmart</h2>
         <p class="text-2xl text-gray-700 max-lg:text-xl">OncoSmart was brought to life by a passionate team dedicated to spreading cancer awareness:</p>
         <div class="w-2/4 flex justify-between items-center mx-auto mb-16 max-sm:flex-col max-sm:w-[90%]">
@@ -124,6 +124,20 @@
         </div>
     </div>
 
+
+    <!-- chatbot -->
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "8KI2Pm_TSHrphMz-EM7gx",
+            domain: "www.chatbase.co",
+            theme: "light"
+        };
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="8KI2Pm_TSHrphMz-EM7gx"
+        domain="www.chatbase.co">
+    </script>
     <!-- gsaplibrary -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -141,6 +155,30 @@
             duration: 1, 
             y: 50,
             stagger: 0.3
+        });
+        gsap.from(".scroll1", {
+            opacity: 0,
+            delay: 0.5,
+            duration: 1, 
+            y: 50,
+            stagger: 0.3,
+            scrollTrigger: ".scroll1"
+        });
+        gsap.from(".scroll2", {
+            opacity: 0,
+            delay: 0.5,
+            duration: 1, 
+            y: 50,
+            stagger: 0.3,
+            scrollTrigger: ".scroll2"
+        });
+        gsap.from(".scroll3", {
+            opacity: 0,
+            delay: 0.5,
+            duration: 1, 
+            y: 50,
+            stagger: 0.3,
+            scrollTrigger: ".scroll3"
         });
         let tl = gsap.timeline();
         tl.from(".menuitems", {
