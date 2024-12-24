@@ -1,16 +1,3 @@
-let menu = document.querySelector("#menu");
-let menulist = document.querySelector("#menuList");
-let close = document.querySelector("#close");
-
-menu.addEventListener("click", () => {
-    menulist.classList.remove("translate-y-[-300%]");
-    menulist.classList.add("translate-y-[-96px]");
-})
-close.addEventListener("click", () => {
-    menulist.classList.add("translate-y-[-300%]");
-    menulist.classList.remove("translate-y-[-96px]");
-    console.log("close");
-})
 
 // swiper JS
 const swiper = new Swiper('.swiper', {
@@ -29,3 +16,30 @@ const swiper = new Swiper('.swiper', {
     },
   
 });
+
+const sliders = document.querySelectorAll(".sliders");
+const slidersAns = document.querySelectorAll(".sliderAns");
+sliders.forEach((slider, index) => { 
+  slider.addEventListener("click", () => {
+        if (slidersAns[index].classList.contains("h-max")) {
+            gsap.to(slider.children[1], {
+                duration: 0.2,
+                delay: 0.2,
+                rotate: 0
+            });
+            slidersAns[index].classList.remove("h-max");
+            slidersAns[index].classList.remove("p-4");
+            slidersAns[index].classList.add("h-0");
+        }
+        else {
+            gsap.to(slider.children[1], {
+                duration: 0.2,
+                delay: 0.2,
+                rotate: 45
+            });
+            slidersAns[index].classList.add("h-max");
+            slidersAns[index].classList.add("p-4");
+            slidersAns[index].classList.remove("h-0");
+        }
+    })
+})
